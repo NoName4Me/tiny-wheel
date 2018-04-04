@@ -7,9 +7,11 @@
     <title>Document</title>
 </head>
 <body ngl-controller="MainCtrl">
-    <span ngl-bind="bar"></span>
-    <button ngl-click="foo()">Increment</button>
-    <!--
+    <input ngl-model="current" type="text"><button ngl-click="add()">Add</button><br>
+    <span>above item&nbsp;<strong ngl-bind="current" style="color:red"></strong>&nbsp;will be add to the list below:</span>
+    <ul>
+        <li ngl-repeat="item in items" ngl-bind="item"></li>
+    </ul>
     <script src="./Utils.js"></script>
     <script src="./Scope.js"></script>
     <script src="./Provider.js"></script>
@@ -21,7 +23,6 @@
     <script src="./directives/ngl-controller.js"></script>
     <script src="./directives/ngl-model.js"></script>
     <script src="./directives/ngl-repeat.js"></script>
-    -->
     <script src="./app.js"></script>
 </body>
 </html>
